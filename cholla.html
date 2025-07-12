@@ -1,0 +1,95 @@
+<head>
+<style>
+  button {
+	background: limegreen;
+	border: none;
+	border-radius: 10%;
+	position: absolute;
+	padding: 5px;
+  font-size:18px;
+  cursor:pointer;
+}
+  
+  img {
+    width="100%";
+  }
+  
+  </style>
+  
+</head>
+
+<body style="display:grid;align-items: center;">
+<div >
+  
+  <!--main style="display:grid;">
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+      <img width="100%" src="https://ucarecdn.com/1226942d-5101-4c50-80f9-25d3e30ead12/-/quality/smart_retina/-/format/auto/">
+    </div>
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+      <img width="100%" src="https://ucarecdn.com/e2a808c7-c02b-435a-9bd2-f083446677b9/-/quality/smart_retina/-/format/auto/"></div>
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+    <img width="100%" src="https://ucarecdn.com/3874f6b4-ec0a-4cfa-bfd9-f021c859ddf2/-/quality/smart_retina/-/format/auto/">
+    </div>
+  </main-->
+  
+  <main style="display:grid;">
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+      <img width="100%" src="https://ucarecdn.com/1226942d-5101-4c50-80f9-25d3e30ead12/-/quality/smart_retina/-/format/auto/">
+    </div>
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+      <img width="100%" src="https://ucarecdn.com/e2a808c7-c02b-435a-9bd2-f083446677b9/-/quality/smart_retina/-/format/auto/"></div>
+    <div>
+      <button  onclick="document.fullscreenElement ?  document.exitFullscreen() : document.getElementById('cholla').requestFullscreen()">
+   ⛶
+  </button>
+    <img width="100%" src="https://ucarecdn.com/3874f6b4-ec0a-4cfa-bfd9-f021c859ddf2/-/quality/smart_retina/-/format/auto/">
+    </div>
+  </main>
+  
+  <div>
+    <img  src="https://ucarecdn.com/44dac921-73f7-46d7-8c5b-311ddf3d8d18/-/quality/smart/-/format/auto/" id="cholla"  style="height:100vh;align-self:center;cursor:pointer" loading="lazy"   >
+  </div>
+  
+  </div>
+  
+</body>
+
+<script>
+    const button = document.querySelector('#button')
+    const cholla = document.getElementById('cholla')
+ const showFullScreen = () => {
+ 
+   try {
+      cholla.requestFullscreen();
+   } catch (err) {
+      if(document.fullscreenElement){ 
+      document.exitFullscreen() 
+   } else { 
+    cholla.requestFullscreen();
+   }
+   }
+  
+
+ }
+ 
+ cholla.addEventListener('click', showFullScreen())
+ 
+ 
+ //this.requestFullscreen().catch((err) => {console.log(${err.message} (${err.name}))});
+</script>
+

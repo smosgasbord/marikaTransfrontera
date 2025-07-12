@@ -1,0 +1,225 @@
+/* #63CFC2 - celeste
+#f7ecd6 - beige
+#fc4ebf - fucsia */
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Young+Serif&display=swap');
+
+#ran {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 4px;
+	background: white;
+	border-radius: 5px;
+	font-size: 10px;
+	text-decoration: lightpink;
+}
+
+#ran > a {
+  color: #fc4ebf;
+}
+
+.close-button {
+  padding: 10px;
+  background: black;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  transform: translate(20px, -20px);
+  cursor: pointer;
+  position:absolute;
+}
+
+#card {
+  z-index: 99;
+}
+
+.talk-bubble {
+  position: absolute;
+  height: auto;
+  background-color: white;
+  display:none;
+}
+
+ellipse {
+  cursor: pointer;
+}
+
+body {
+ /* overflow-x:hidden;*/
+  background: #f7edd4;
+  font-family: 'Rubik', sans-serif;
+  
+}
+
+strong {
+  font-family: 'Young Serif', serif;
+}
+
+.year-btn {
+  background: #fc4ebf;
+  padding: 5px;
+  color: white;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #f7edd4;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f7edd4;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 11px;
+  /*border: 3px solid #ffffff;*/
+}
+
+div:empty,
+p:empty {
+  display: none;
+}
+
+#cardData {
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+  grid-gap: 2em;
+  
+}
+
+.artCard {
+background: #f7edd4  ;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #f7edd4;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+.modal-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-content button:hover {
+  background-color: #0069d9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+}
+
+@media only screen and (orientation: portrait) {
+  .modal-content {
+    width: 80%;
+  }
+}
+
+.fancybox-bg, .close-button  {
+  display:block!important;
+}
+
+#svg-pan-zoom-controls {
+    transform: translate(10px, 10px)!important;
+    scale: 0.75!important;
+}
+
+/* PRELOADER */
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000000000000000000;
+  display: grid;
+  align-items:center;
+}
+
+#preloader > img {
+  align-self:center;
+  margin:auto;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+.preloaded:before,
+.preloaded:after {
+  -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+
+@keyframes preloadedzero {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
